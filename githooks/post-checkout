@@ -4,30 +4,30 @@ branch_name=$(git symbolic-ref --short HEAD)
 
 if [ "$branch_name" = "test" ]; then
   echo "Updating environment variables for branch $branch_name"
-  echo "RC_TOKEN=`"Basic MTc4NjdlNTctZDJkOC00ZGI1LTg2N2UtNTdkMmQ4NGRiNTczOlNLVVBGU1NMUndKdlgtcGJYNjlfako3c0VNT3FLNkZxWng5ZVh5aTJWV0U="`
-BC_TOKEN=""Basic Y2EyNmMzMjEtYmE4MC00ODU3LWE2YzMtMjFiYTgwODg1NzdiOjVRUnZKUlhnQ0ZxNzNaN0VXRkYyalpuM20tb3dLMndsS3hlQVVudUt4OFU=""
-WHITELIST="["https://testibank.m-bank.mn", "https://172.18.200.225/"]"
-DOMAIN=""https://10.41.200.92:801/gateway/""
+  echo "RC_TOKEN='Basic MTc4NjdlNTctZDJkOC00ZGI1LTg2N2UtNTdkMmQ4NGRiNTczOlNLVVBGU1NMUndKdlgtcGJYNjlfako3c0VNT3FLNkZxWng5ZVh5aTJWV0U='
+BC_TOKEN='Basic Y2EyNmMzMjEtYmE4MC00ODU3LWE2YzMtMjFiYTgwODg1NzdiOjVRUnZKUlhnQ0ZxNzNaN0VXRkYyalpuM20tb3dLMndsS3hlQVVudUt4OFU='
+WHITELIST='['https://testibank.m-bank.mn', 'https://172.18.200.225/']'
+DOMAIN='https://10.41.200.92:801/gateway/'
 " > .env.local
 elif [ "$branch_name" = "pre" ]; then
   echo "Updating environment variables for branch $branch_name"
-  echo "RC_TOKEN=`"Basic Mjk2ZjEwY2UtNDc1OS00ZDQ0LWFmMTAtY2U0NzU5N2Q0NDA1OnR1aFlmSEV2SXEwdENianBlbFN6NTRvNHBlOU5JS0NvZTAzdHl6dU5Vc1E="`
-BC_TOKEN=""Basic MmJiNGNhYzYtODhkZC00NDMwLWI0Y2EtYzY4OGRkMDQzMGQwOjc1dGpBRFd0aGNvWHRLS3R2djUwN0xaVGVCV0dxV1Z2ZjdPTlhPYWUzcXc=""
-WHITELIST="["https://preibank.m-bank.mn", "https://172.19.42.48/"]"
-DOMAIN=""https://172.19.41.23:8082/""
+  echo "RC_TOKEN='Basic Mjk2ZjEwY2UtNDc1OS00ZDQ0LWFmMTAtY2U0NzU5N2Q0NDA1OnR1aFlmSEV2SXEwdENianBlbFN6NTRvNHBlOU5JS0NvZTAzdHl6dU5Vc1E='
+BC_TOKEN='Basic MmJiNGNhYzYtODhkZC00NDMwLWI0Y2EtYzY4OGRkMDQzMGQwOjc1dGpBRFd0aGNvWHRLS3R2djUwN0xaVGVCV0dxV1Z2ZjdPTlhPYWUzcXc='
+WHITELIST='['https://preibank.m-bank.mn', 'https://172.19.42.48/']'
+DOMAIN='https://172.19.41.23:8082/'
 " > .env.local
 elif [ "$branch_name" = "prod" ]; then
   echo "Updating environment variables for branch $branch_name"
-  echo "RC_TOKEN=`"Basic ZmEyZWNmYTktYThmNS00NWRiLWFlY2YtYTlhOGY1NDVkYjUyOlRVTTlWcUlYMmxoMGd5Y2RHQTJvMkh3VC01LUxvcDEyY0l5X1YwVmxTcU0="`
-BC_TOKEN=""Basic ZmUwNjVhNWEtMjViMi00NTdjLTg2NWEtNWEyNWIyOTU3YzBiOnp0QkpOMElFODgxcEZxaFozZm9FWmxRMFNDbGxkSXNLdUZ2LU1LRUg5ekE=""
-WHITELIST="["https://e-mbank.mn", "https://203.217.138.11/"]"
-DOMAIN=""https://172.18.41.100:8082/""
+  echo "RC_TOKEN='Basic ZmEyZWNmYTktYThmNS00NWRiLWFlY2YtYTlhOGY1NDVkYjUyOlRVTTlWcUlYMmxoMGd5Y2RHQTJvMkh3VC01LUxvcDEyY0l5X1YwVmxTcU0='
+BC_TOKEN='Basic ZmUwNjVhNWEtMjViMi00NTdjLTg2NWEtNWEyNWIyOTU3YzBiOnp0QkpOMElFODgxcEZxaFozZm9FWmxRMFNDbGxkSXNLdUZ2LU1LRUg5ekE='
+WHITELIST='['https://e-mbank.mn', 'https://203.217.138.11/']'
+DOMAIN='https://172.18.41.100:8082/'
 " > .env.local
 else
   echo "Unknown branch name: $branch_name"
-  echo "RC_TOKEN=`"Basic MTc4NjdlNTctZDJkOC00ZGI1LTg2N2UtNTdkMmQ4NGRiNTczOlNLVVBGU1NMUndKdlgtcGJYNjlfako3c0VNT3FLNkZxWng5ZVh5aTJWV0U="`
-BC_TOKEN=""Basic Y2EyNmMzMjEtYmE4MC00ODU3LWE2YzMtMjFiYTgwODg1NzdiOjVRUnZKUlhnQ0ZxNzNaN0VXRkYyalpuM20tb3dLMndsS3hlQVVudUt4OFU=""
-WHITELIST="["https://testibank.m-bank.mn", "https://172.18.200.225/"]"
-DOMAIN=""https://10.41.200.92:801/gateway/""
+  echo "RC_TOKEN='Basic MTc4NjdlNTctZDJkOC00ZGI1LTg2N2UtNTdkMmQ4NGRiNTczOlNLVVBGU1NMUndKdlgtcGJYNjlfako3c0VNT3FLNkZxWng5ZVh5aTJWV0U='
+BC_TOKEN='Basic Y2EyNmMzMjEtYmE4MC00ODU3LWE2YzMtMjFiYTgwODg1NzdiOjVRUnZKUlhnQ0ZxNzNaN0VXRkYyalpuM20tb3dLMndsS3hlQVVudUt4OFU='
+WHITELIST='['https://testibank.m-bank.mn', 'https://172.18.200.225/']'
+DOMAIN='https://10.41.200.92:801/gateway/'
 " > .env.local
 fi
